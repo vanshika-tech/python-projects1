@@ -1,0 +1,64 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>result</title>
+    <style>
+       .res{
+       background-color:#f5f5ef;
+       }
+
+
+        table,th, td{
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+
+
+
+        th{
+        height:50px;
+        }
+
+        td{
+        padding: 15px;
+        text-align: left;
+        }
+    </style>
+</head>
+<body class="res">
+
+{% if obj%}
+<table class="tbl">
+    <tr><th>S.NO</th>
+        <th>SECOND NAME</th>
+        <th>FIRST NAME</th>
+        <th>DESIGNATION</th>
+        <th>DIRECTNO</th>
+        <th>EABXNO</th>
+        <th>PHONENO</th>
+        <th>EMAIL</th>
+        <th>OFFICE</th>
+    </tr>
+
+    {% for k in obj%}
+    <tr>
+        <td>{{k.sno}}</td>
+        <td>{{k.sname}}</td>
+        <td>{{k.fname}}</td>
+        <td>{{k.desig}}</td>
+        <td>{{k.directno}}</td>
+        <td>{{k.eabxno}}</td>
+        <td>{{k.phone}}</td>
+        <td>{{k.emailid}}</td>
+        <td>{{k.office}}</td>
+    </tr>
+    {% endfor%}
+
+
+</table>
+ {% endif%}
+
+</body>
+</html>
